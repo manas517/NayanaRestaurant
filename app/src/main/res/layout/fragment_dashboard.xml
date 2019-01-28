@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.DashboardFragment">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+            <!-- Adding 3 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/recipe_placeholder_item" />
+
+                <include layout="@layout/recipe_placeholder_item" />
+
+                <include layout="@layout/recipe_placeholder_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dashboard_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:padding="4dp">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/special_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/popular_meal_combo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_meal_combo"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/special_rv" />
+
+            <TextView
+                android:id="@+id/see_all_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:textColor="#ca1919"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/popular_meal_combo_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="@id/popular_meal_combo_tv"
+                app:layout_constraintTop_toBottomOf="@id/special_rv" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/popular_meal_combo_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/popular_meal_combo_tv">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/features_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/features"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/popular_meal_combo_rv" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/features_grid_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/features_tv">
+            </android.support.v7.widget.RecyclerView>
+            <ImageView
+                android:id="@+id/patanjali_rel_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/features_grid_rv"
+                android:contentDescription="TODO">
+            </ImageView>
+
+            <Button
+                android:id="@+id/patanjali_browse_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/browse"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_bg"
+                android:minHeight="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/patanjali_rel_lay"
+                app:layout_constraintEnd_toEndOf="@id/patanjali_rel_lay"
+                android:textColor="@android:color/white"
+                />
+
+
+            <TextView
+                android:id="@+id/additional_feature_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/additional_features"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/patanjali_rel_lay" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/additional_feature_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/additional_feature_tv" />
+            <ImageView
+                android:id="@+id/catering_iv"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toBottomOf="@id/additional_feature_rv" />
+            <Button
+                android:id="@+id/catering_service_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_bg"
+                android:minHeight="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/catering_iv"
+                app:layout_constraintEnd_toEndOf="@id/catering_iv"
+                android:textColor="@android:color/white"
+                />
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

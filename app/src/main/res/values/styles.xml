@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated" tools:targetApi="lollipop">@color/colorPrimary</item>
+        <item name="colorSwitchThumbNormal" tools:targetApi="lollipop">@android:color/white</item>
+        <item name="android:colorForeground" tools:targetApi="lollipop">@android:color/holo_red_dark</item>
+    </style>
+    <style parent="@style/Platform.ThemeOverlay.AppCompat.Dark" name="Base.ThemeOverlay.AppCompat.Dark">
+
+    <item name="android:colorForeground">@color/foreground_material_dark</item>
+
+    <item name="android:colorBackground">@color/background_material_dark</item>
+
+    <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
+
+    <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
+
+    <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
+
+    <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
+
+    <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
+
+    <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+
+    <item name="android:windowBackground">@color/background_material_dark</item>
+
+    <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
+
+    <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+
+    <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
+
+    <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
+
+    <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_light</item>
+
+    <item name="android:colorBackgroundCacheHint">@color/abc_background_cache_hint_selector_material_dark</item>
+
+    <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
+
+    <item name="colorButtonNormal">@color/button_material_dark</item>
+
+    <item name="colorControlHighlight">@color/ripple_material_dark</item>
+
+    <item name="colorControlNormal">?android:textColorSecondary</item>
+
+    <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
+
+    <item name="isLightTheme">false</item>
+
+</style>
+
+</resources>

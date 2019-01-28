@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+        <View
+            android:id="@+id/patan_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/back_bg" />
+        <View
+            android:id="@+id/patan_view1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toRightOf="@id/patan_view"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:background="@drawable/back_bg" />
+        <View
+            android:id="@+id/patan_view2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toRightOf="@id/patan_view1"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:background="@drawable/back_bg" />
+        <View
+            android:id="@+id/patan_view3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toRightOf="@id/patan_view2"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:background="@drawable/back_bg" />
+
+</android.support.constraint.ConstraintLayout>

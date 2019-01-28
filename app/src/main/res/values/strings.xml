@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Nayana Restaurant</string>
+    <string name="meal_combo">Meal Combo</string>
+    <string name="patanjali_world">Patanjali World</string>
+    <string name="restaurant_menu">Restaurant Menu</string>
+    <string name="atta_other_flours"> Atta and Other Flours</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="popular_meal_combo">Popular Meal Combos</string>
+    <string name="popular_lunch_combo_veg">Popular Lunch Combo (Veg)</string>
+    <string name="popular_lunch_combo_non_veg">Popular Lunch Combo (Non Veg)</string>
+    <string name="popular_dinner_combo_veg">Popular Dinner Combo (Veg)</string>
+    <string name="popular_dinner_combo_non_veg">Popular Dinner Combo (Non Veg)</string>
+    <string name="see_all">See All</string>
+    <string name="features">Features</string>
+    <string name="additional_features">Additional Features</string>
+    <string name="browse">Browse</string>
+    <string name="contact">Contact Us</string>
+    <string name="name">Jayattma Prusty</string>
+    <string name="phone_no">+91 96045903083</string>
+    <string name="catering_service_provider">Catering Service Providers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

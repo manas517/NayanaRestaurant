@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/categories_iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+       android:padding="7dp"
+        android:background="@drawable/back_bg">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/category_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grocery"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/categories_iv"
+        app:layout_constraintStart_toStartOf="@id/categories_iv"
+        app:layout_constraintTop_toBottomOf="@id/categories_iv" />
+
+</android.support.constraint.ConstraintLayout>
+
