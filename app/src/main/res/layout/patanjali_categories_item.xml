@@ -20,6 +20,7 @@
         android:text="Grocery"
         android:textSize="12dp"
         android:textStyle="bold"
+        android:maxLength="9"
         app:layout_constraintEnd_toEndOf="@id/categories_iv"
         app:layout_constraintStart_toStartOf="@id/categories_iv"
         app:layout_constraintTop_toBottomOf="@id/categories_iv" />

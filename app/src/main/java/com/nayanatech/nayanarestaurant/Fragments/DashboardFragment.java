@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.nayanatech.nayanarestaurant.Activity.PatanjaliWorld;
 import com.nayanatech.nayanarestaurant.Activity.PopularLunchComboMeals;
+import com.nayanatech.nayanarestaurant.Activity.RestaurantList;
 import com.nayanatech.nayanarestaurant.Adapter.AdditionalFeaturesRecycleViewAdapter;
 import com.nayanatech.nayanarestaurant.Adapter.FeaturesGridAdapter;
 import com.nayanatech.nayanarestaurant.Adapter.PopularComboRecyclerviewAdapter;
@@ -27,6 +28,7 @@ import com.nayanatech.nayanarestaurant.Adapter.SpecialRecycleviewAdapter;
 import com.nayanatech.nayanarestaurant.Model.DashboardModel;
 import com.nayanatech.nayanarestaurant.Model.Item;
 import com.nayanatech.nayanarestaurant.Model.Section;
+import com.nayanatech.nayanarestaurant.Model.SubCategory;
 import com.nayanatech.nayanarestaurant.NetworkApi.ApiInterface;
 import com.nayanatech.nayanarestaurant.NetworkApi.ApiRetrofitCall;
 import com.nayanatech.nayanarestaurant.R;
@@ -61,6 +63,7 @@ public class DashboardFragment extends Fragment {
     private SpecialRecycleviewAdapter specialRecycleviewAdapter;
     private PopularComboRecyclerviewAdapter popularComboRecyclerviewAdapter;
     private AdditionalFeaturesRecycleViewAdapter additionalFeaturesRecycleViewAdapter;
+    private FeaturesGridAdapter featuresGridAdapter=new FeaturesGridAdapter(getActivity(),itemArrayList);
     private ConstraintLayout constraintLayout_data;
     public DashboardFragment() {
         // Required empty public constructor
@@ -125,6 +128,16 @@ public class DashboardFragment extends Fragment {
 
             }
         });
+       catering_img_view.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(getActivity(),RestaurantList.class);
+               startActivity(intent);
+               getActivity().overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+
+           }
+       });
+
     }
 
     private void networkCallForDashboard() {
@@ -146,11 +159,11 @@ public class DashboardFragment extends Fragment {
                         setAdapter();
                         itemArrayList = (ArrayList<Item>) sectionArrayList.get(1).getItems();
                         setPopularComboAdapter();
-                        itemArrayList = (ArrayList<Item>) sectionArrayList.get(4).getItems();
-                        setAdditionalFeatureAdapter();
+                   /*     itemArrayList = (ArrayList<Item>) sectionArrayList.get(4).getItems();
+                        setAdditionalFeatureAdapter();*/
                         itemArrayList = (ArrayList<Item>) sectionArrayList.get(3).getItems();
                         Glide.with(getActivity()).load(DashboardFragment.additional_feature_image_url + itemArrayList.get(0).getImagename()).into(patanjali_rel_lay);
-                        itemArrayList = (ArrayList<Item>) sectionArrayList.get(5).getItems();
+                        itemArrayList = (ArrayList<Item>) sectionArrayList.get(4).getItems();
                         Glide.with(getActivity()).load(DashboardFragment.additional_feature_image_url + itemArrayList.get(0).getImagename()).into(catering_img_view);
                         itemArrayList = (ArrayList<Item>) sectionArrayList.get(2).getItems();
                         setFeaturesGridAdapter();

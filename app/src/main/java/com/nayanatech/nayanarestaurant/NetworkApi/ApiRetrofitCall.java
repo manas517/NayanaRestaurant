@@ -15,11 +15,17 @@ public class ApiRetrofitCall {
         HttpLoggingInterceptor interceptor=new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         //Okhttp
-        OkHttpClient client=new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient okHttpClient=new OkHttpClient
+                .Builder()
+                .addInterceptor(interceptor)
+                .build();
         //retrofit client and add okhttp clent to retrofit
-        retrofit=new Retrofit.Builder().baseUrl(BASE_URL)
+        retrofit=new Retrofit
+                .Builder()
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(client).build();
+                .client(okHttpClient)
+                .build();
 
         return retrofit;
     }

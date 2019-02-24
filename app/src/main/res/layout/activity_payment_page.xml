@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PaymentPage">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/preferred_payment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_20"
+            android:text="@string/preferred_payment"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_amazonPay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/padding_10"
+            app:layout_constraintTop_toBottomOf="@id/preferred_payment_tv">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:id="@+id/amazonPay_iv"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_amazon_pay"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/price_amazonPay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintBottom_toBottomOf="@id/amazonPay_iv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/amazonPay_iv" />
+
+                <ImageView
+                    android:id="@+id/ok_amazonpay"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_amazonPay_tv"
+                    app:layout_constraintStart_toEndOf="@+id/price_amazonPay_tv"
+                    app:layout_constraintTop_toTopOf="@+id/price_amazonPay_tv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_amazonPay" />
+
+        <TextView
+            android:id="@+id/wallet_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_20"
+            android:text="@string/wallets"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/padding_10"
+            app:layout_constraintTop_toBottomOf="@id/wallet_tv">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/phonepe_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/ic_phonepe_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/phonepe_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/phonepe"
+                    app:layout_constraintBottom_toBottomOf="@id/phonepe_iv"
+                    app:layout_constraintLeft_toRightOf="@id/phonepe_iv"
+                    app:layout_constraintTop_toTopOf="@id/phonepe_iv" />
+
+                <TextView
+                    android:id="@+id/price_phonepe_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/rs"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/phonepe_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/phonepe_tv" />
+
+                <ImageView
+                    android:id="@+id/ok_phonepe"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_phonepe_tv"
+                    app:layout_constraintStart_toEndOf="@+id/price_phonepe_tv"
+                    app:layout_constraintTop_toTopOf="@+id/price_phonepe_tv"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_wallet" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_paytm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/view2">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/payTm_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/v2_ic_paytm"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/payTm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/paytm"
+                    app:layout_constraintBottom_toBottomOf="@id/payTm_iv"
+                    app:layout_constraintLeft_toRightOf="@id/payTm_iv"
+                    app:layout_constraintTop_toTopOf="@id/payTm_iv" />
+
+                <TextView
+                    android:id="@+id/price_payTm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/rs"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/payTm_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/payTm_tv" />
+
+                <ImageView
+                    android:id="@+id/ok_payTm"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_payTm_tv"
+                    app:layout_constraintStart_toEndOf="@+id/price_payTm_tv"
+                    app:layout_constraintTop_toTopOf="@+id/price_payTm_tv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_paytm" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_freeCharge"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/view3">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/freeCharge_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/v2_ic_freecharge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/freeCharge_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/freecharge"
+                    app:layout_constraintBottom_toBottomOf="@id/freeCharge_iv"
+                    app:layout_constraintLeft_toRightOf="@id/freeCharge_iv"
+                    app:layout_constraintTop_toTopOf="@id/freeCharge_iv" />
+
+                <TextView
+                    android:id="@+id/price_freeCharge_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/rs"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/freeCharge_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/freeCharge_tv" />
+
+                <ImageView
+                    android:id="@+id/ok_freeCharge"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_freeCharge_tv"
+                    app:layout_constraintStart_toEndOf="@+id/price_freeCharge_tv"
+                    app:layout_constraintTop_toTopOf="@+id/price_freeCharge_tv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_freeCharge" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_mobiKwik"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/view4">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/mobikwik_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/v2_ic_mobikwik_payment_option"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/mobikwik_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/mobikwik"
+                    app:layout_constraintBottom_toBottomOf="@id/mobikwik_iv"
+                    app:layout_constraintLeft_toRightOf="@id/mobikwik_iv"
+                    app:layout_constraintTop_toTopOf="@id/mobikwik_iv" />
+
+                <TextView
+                    android:id="@+id/price_mobikwik_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/rs"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mobikwik_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mobikwik_tv" />
+
+                <ImageView
+                    android:id="@+id/ok_mobikwik"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/price_mobikwik_tv"
+                    app:layout_constraintStart_toEndOf="@+id/price_mobikwik_tv"
+                    app:layout_constraintTop_toTopOf="@+id/price_mobikwik_tv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_mobiKwik" />
+
+        <TextView
+            android:id="@+id/debitCard_CreditCard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_20"
+            android:text="@string/debit_credit_cards"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view5" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_debit_credit_card"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/padding_10"
+            app:layout_constraintTop_toBottomOf="@id/debitCard_CreditCard_tv">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/debit_credit_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/ic_payment_visa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/credit_debit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/_5242_xxxx_xxxx_0588"
+                    app:layout_constraintBottom_toBottomOf="@id/debit_credit_iv"
+                    app:layout_constraintLeft_toRightOf="@id/debit_credit_iv"
+                    app:layout_constraintTop_toTopOf="@id/debit_credit_iv" />
+
+
+                <ImageView
+                    android:id="@+id/ok_debit_credit"
+                    android:layout_width="@dimen/padding_20"
+                    android:layout_height="@dimen/padding_20"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/icon_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/credit_debit_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/credit_debit_tv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#EEECEC"
+            app:layout_constraintTop_toBottomOf="@id/cardView_debit_credit_card" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_addNewCard"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/view6">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/addNewCard_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="@string/add_new_card"
+                    android:textColor="#FF9800"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.28" />
+
+                <TextView
+                    android:id="@+id/save_card_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_and_pay_via_cards"
+                    app:layout_constraintEnd_toEndOf="@id/addNewCard_tv"
+                    app:layout_constraintStart_toStartOf="@id/addNewCard_tv"
+                    app:layout_constraintTop_toBottomOf="@id/addNewCard_tv" />
+
+                <ImageView
+                    android:id="@+id/visa_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_visa_template_32"
+                    app:layout_constraintStart_toStartOf="@id/save_card_tv"
+                    app:layout_constraintTop_toBottomOf="@id/save_card_tv"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/master_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_mastercard_template_32"
+                    app:layout_constraintLeft_toRightOf="@id/visa_iv"
+                    app:layout_constraintTop_toBottomOf="@id/save_card_tv"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/amex_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_amex_template_32"
+                    app:layout_constraintLeft_toRightOf="@id/master_iv"
+                    app:layout_constraintTop_toBottomOf="@id/save_card_tv"
+                    tools:ignore="ContentDescription" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/upi_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_10"
+            android:text="@string/upi_bhim"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView_addNewCard" />
+        
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/toolbar_gradient"
+            app:layout_constraintTop_toBottomOf="@id/upi_tv"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/view_all_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_20"
+            android:text="@string/view_all"
+            android:textColor="@color/colorText"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upi_tv" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="@dimen/padding_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upi_tv">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:scrollbars="none">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/upi_phonepe_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_phonepe_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="ContentDescription" />
+                    <TextView
+                        android:id="@+id/upi_phonepe_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/phonepe"
+                        app:layout_constraintTop_toBottomOf="@id/upi_phonepe_iv"
+                        app:layout_constraintStart_toStartOf="@id/upi_phonepe_iv"
+                        app:layout_constraintEnd_toEndOf="@id/upi_phonepe_iv"/>
+                <ImageView
+                    android:id="@+id/upi_paytm_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_paytm"
+                    app:layout_constraintLeft_toRightOf="@id/upi_phonepe_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_phonepe_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_phonepe_iv"/>
+                <TextView
+                    android:id="@+id/upi_paytm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/paytm"
+                    app:layout_constraintTop_toBottomOf="@id/upi_paytm_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_paytm_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_paytm_iv"/>
+                <ImageView
+                    android:id="@+id/upi_mobiKwik_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_mobikwik_payment_option"
+                    app:layout_constraintLeft_toRightOf="@id/upi_paytm_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_paytm_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_paytm_iv"/>
+                <TextView
+                    android:id="@+id/upi_mobikwik_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/mobikwik"
+                    app:layout_constraintTop_toBottomOf="@id/upi_mobiKwik_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_mobiKwik_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_mobiKwik_iv"/>
+                <ImageView
+                    android:id="@+id/upi_freecharge_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_freecharge"
+                    app:layout_constraintLeft_toRightOf="@id/upi_mobiKwik_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_mobiKwik_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_mobiKwik_iv"/>
+                <TextView
+                    android:id="@+id/upi_freecharge_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/freecharge"
+                    app:layout_constraintTop_toBottomOf="@id/upi_freecharge_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_freecharge_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_freecharge_iv"/>
+
+                <ImageView
+                    android:id="@+id/upi_mobiKwik1_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_mobikwik_payment_option"
+                    app:layout_constraintLeft_toRightOf="@id/upi_freecharge_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_freecharge_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_freecharge_iv"/>
+                <TextView
+                    android:id="@+id/upi_mobikwik1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/mobikwik"
+                    app:layout_constraintTop_toBottomOf="@id/upi_mobiKwik1_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_mobiKwik1_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_mobiKwik1_iv"/>
+                <ImageView
+                    android:id="@+id/upi_phonepe1_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_phonepe_icon"
+                    app:layout_constraintLeft_toRightOf="@id/upi_mobiKwik1_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_mobiKwik1_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_mobiKwik1_iv"/>
+                <TextView
+                    android:id="@+id/upi_phonepe1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/phonepe"
+                    app:layout_constraintTop_toBottomOf="@id/upi_phonepe1_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_phonepe1_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_phonepe1_iv"/>
+                <ImageView
+                    android:id="@+id/upi_freecharge1_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_freecharge"
+                    app:layout_constraintLeft_toRightOf="@id/upi_phonepe1_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_phonepe1_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_phonepe1_iv"/>
+                <TextView
+                    android:id="@+id/upi_freecharge1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/freecharge"
+                    app:layout_constraintTop_toBottomOf="@id/upi_freecharge1_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_freecharge1_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_freecharge1_iv"/>
+                app:layout_constraintEnd_toEndOf="@id/upi_phonepe_iv"/>
+                <ImageView
+                    android:id="@+id/upi_paytm1_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/v2_ic_paytm"
+                    app:layout_constraintLeft_toRightOf="@id/upi_freecharge1_iv"
+                    app:layout_constraintTop_toTopOf="@id/upi_freecharge1_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/upi_freecharge1_iv"/>
+                <TextView
+                    android:id="@+id/upi_paytm1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/paytm"
+                    app:layout_constraintTop_toBottomOf="@id/upi_paytm1_iv"
+                    app:layout_constraintStart_toStartOf="@id/upi_paytm1_iv"
+                    app:layout_constraintEnd_toEndOf="@id/upi_paytm1_iv"/>
+                
+            </android.support.constraint.ConstraintLayout>
+            </HorizontalScrollView>
+
+      
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/card1">
+
+            <include layout="@layout/net_banking" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

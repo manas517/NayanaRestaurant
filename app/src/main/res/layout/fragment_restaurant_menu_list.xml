@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Fragments.RestaurantMenuListFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+            app:contentScrim="@color/colorAccent"
+            app:title="The Ice N Pizza Cafe">
+
+            <ImageView
+                android:id="@+id/restaurant_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/restaurant_image_bg" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="#fff"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp" />
+        <android.support.v7.widget.RecyclerView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/item_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/item_Payment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bottom_added_cart_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4CAF50"
+                android:padding="10dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="15sp"
+               />
+
+            <TextView
+                android:id="@+id/paymet_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Order"
+                android:textColor="@color/colorText"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/bottom_added_cart_item_tv"
+                app:layout_constraintEnd_toEndOf="@+id/bottom_added_cart_item_tv"
+                app:layout_constraintTop_toTopOf="@+id/bottom_added_cart_item_tv" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+   <!-- <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/number_button"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:background="@color/colorPrimary"
+            app:textColor="@color/colorText"
+            app:textSize="5sp"
+            android:visibility="invisible"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:background="@color/colorPrimary"
+            android:text="Add"
+            android:textSize="10sp"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <ExpandableListView
+            android:id="@+id/expanded_menu_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/number_button"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+            android:divider="@color/colorAccent"
+            android:nestedScrollingEnabled="false"
+            android:dividerHeight="0.5dp">
+        </ExpandableListView>
+
+    </android.support.constraint.ConstraintLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/netBanking_layout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/netBanking_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="@dimen/padding_10"
+        android:text="@string/net_banking"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/padding_10"
+        app:layout_constraintTop_toBottomOf="@id/netBanking_tv">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scrollbars="none">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/hdfc_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hdfc_bank"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/sbi_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sbi_bank"
+                    app:layout_constraintBottom_toBottomOf="@+id/hdfc_bank_iv"
+                    app:layout_constraintStart_toEndOf="@+id/hdfc_bank_iv"
+                    app:layout_constraintTop_toTopOf="@+id/hdfc_bank_iv"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/icici_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icici_bank"
+                    app:layout_constraintBottom_toBottomOf="@id/sbi_bank_iv"
+                    app:layout_constraintStart_toEndOf="@id/sbi_bank_iv"
+                    app:layout_constraintTop_toTopOf="@id/sbi_bank_iv"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/axis_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/axisbank"
+                    app:layout_constraintBottom_toBottomOf="@id/icici_bank_iv"
+                    app:layout_constraintStart_toEndOf="@id/icici_bank_iv"
+                    app:layout_constraintTop_toTopOf="@id/icici_bank_iv"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/overseas_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/overseas_bank"
+                    app:layout_constraintBottom_toBottomOf="@id/axis_bank_iv"
+                    app:layout_constraintStart_toEndOf="@id/axis_bank_iv"
+                    app:layout_constraintTop_toTopOf="@id/axis_bank_iv"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/dbs_bank_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dbs_bank"
+                    app:layout_constraintBottom_toBottomOf="@id/overseas_bank_iv"
+                    app:layout_constraintStart_toEndOf="@id/overseas_bank_iv"
+                    app:layout_constraintTop_toTopOf="@id/overseas_bank_iv"
+                    tools:ignore="ContentDescription" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </HorizontalScrollView>
+
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

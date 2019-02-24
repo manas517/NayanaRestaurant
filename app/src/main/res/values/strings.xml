@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nayana Restaurant</string>
+    <string name="app_name"></string>
     <string name="meal_combo">Meal Combo</string>
     <string name="patanjali_world">Patanjali World</string>
     <string name="restaurant_menu">Restaurant Menu</string>
@@ -26,4 +26,38 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_text">Home Fragment Tab</string>
+    <string name="food_text">Food Fragment Tab</string>
+    <string name="juice_text">Juice Fragment Tab</string>
+    <string name="care_text">Care Fragment Tab</string>
+    <string name="grocery_text">Grocery Fragment Tab</string>
+    <string name="total_item_text">%1$d items</string>
+    <string name="rs">\u20B9 100</string>
+    <string name="title_activity_tab_acitivity">TabAcitivity</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Food</string>
+    <string name="tab_text_3">Juice</string>
+    <string name="tab_text_4">Care</string>
+    <string name="tab_text_5">Grocery</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="preferred_payment">PREFERRED PAYMENT</string>
+    <string name="todo">TODO</string>
+    <string name="wallets">WALLETS</string>
+    <string name="phonepe">PhonePe</string>
+    <string name="paytm">PayTM</string>
+    <string name="freecharge">Freecharge</string>
+    <string name="debit_credit_cards">DEBIT/CREDIT CARDS</string>
+    <string name="_5242_xxxx_xxxx_0588">5242-xxxx-xxxx-0588</string>
+    <string name="add_new_card">ADD NEW CARD</string>
+    <string name="save_and_pay_via_cards">Save and Pay via Cards</string>
+    <string name="upi_bhim">UPI/BHIM</string>
+    <string name="view_all">View All</string>
+    <string name="upi_Bhim" />
+    <string name="upiBhim">UPI/BHIM</string>
+    <string name="net_banking">NET BANKING</string>
+    <string name="mobikwik">MobiKwik</string>
+    <string name="title_activity_grocery_button_navigation">GroceryButtonNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

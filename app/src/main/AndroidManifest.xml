@@ -12,6 +12,63 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Activity.GroceryButtonNavigation"
+            android:label="@string/title_activity_grocery_button_navigation"></activity>
+        <activity
+            android:name=".Activity.NetBankingActivity"
+            android:label="Net Banking">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.PaymentPage" />
+        </activity>
+        <activity
+            android:name=".Activity.PaymentPage"
+            android:label="Payment" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Activity.RestaurantMenu" />
+
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.TabAcitivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.PaymentActivity"
+            android:label="Payment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.PopularLunchComboMeals" />
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_pqg80n0d4mWlAN" />
+
+        <activity
+            android:name=".Activity.RestaurantMenuList"
+            android:label="Hotel Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.PopularLunchComboMeals" />
+        </activity>
+        <activity
+            android:name=".Activity.RestaurantList"
+            android:label="Restaurants">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.PopularLunchComboMeals" />
+        </activity>
+        <activity
             android:name=".Activity.DashboardActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -35,7 +92,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activity.PopularLunchComboMeals" />
         </activity>
-        <activity android:name=".Activity.PatanjaliWorld"
+        <activity
+            android:name=".Activity.PatanjaliWorld"
             android:label="@string/patanjali_world">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
